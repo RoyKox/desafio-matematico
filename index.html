@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ CyberMath 2005 - Fibonacci & Prime Matrix</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo"><span class="text-neon-cyan">⚡ CYBER</span><span class="text-neon-pink">MATH</span></a>
+            <ul class="nav-menu">
+                <li><a href="#contexto">Explicación</a></li>
+                <li><a href="#ejercicio1">Ahorro</a></li>
+                <li><a href="#ejercicio2">Naturaleza</a></li>
+                <li><a href="#ejercicio3">Seguridad</a></li>
+                <li><a href="#ejercicio4">Matriz Combinada</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="main-header" id="inicio">
+        <div class="header-container">
+            <h1 class="neon-title-purple">Desafío Web: Matemáticas del Mundo Real</h1>
+            <p class="subtitle">"Matemáticas que resuelven problemas: Fibonacci y Números Primos en la vida real"</p>
+            <div class="meta-info">
+                <span class="badge badge-cyan">Estudiante: Roy Anderon Garcia Mendoza </span>
+                <span class="badge badge-pink"> Materia: Programacion Web</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="card intro-card" id="contexto">
+            <h2 class="neon-text-cyan">1. Contexto Real y Fundamento de los Algoritmos</h2>
+            <p>Este sistema interactivo demuestra la aplicación directa de dos pilares de la matemática discreta en entornos computacionales y prácticos del mundo moderno:</p>
+            
+            <div class="fundamentos-grid">
+                <div class="fundamento-item item-cyan">
+                    <h3 class="text-neon-cyan">Sucesión de Fibonacci</h3>
+                    <p>Fórmula de crecimiento exponencial controlado. En el plano real modela la distribución geométrica biológica, espirales orgánicas de plantas y optimización de capital mediante planes de ahorro escalonados, donde la acumulación de fondos sigue la inercia de la suma de los dos períodos inmediatos anteriores.</p>
+                </div>
+                <div class="fundamento-item item-pink">
+                    <h3 class="text-neon-pink">Números Primos</h3>
+                    <p>Bloques de construcción numéricos indivisibles. Fundamento indispensable de la seguridad criptográfica moderna y validación lúdica de accesos. Un entero es primo si carece de factores de descomposición lineales exceptuando el valor unitario y su propia magnitud.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejercicios">
+            <h2 class="section-title neon-text-purple">2. Módulos Operacionales y Simulación Dinámica</h2>
+            
+            <div class="grid-layout">
+                
+                <article class="card exercise-card card-cyan" id="ejercicio1">
+                    <div class="card-badge badge-neon-cyan">Fibonacci Finanzas</div>
+                    <h3>Plan de Ahorro Progresivo</h3>
+                    <p class="description">Simula una estrategia financiera de depósitos variables controlados por la secuencia matemática pura, calculando de forma acumulativa el patrimonio neto.</p>
+                    
+                    <div class="code-window">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-title">algoritmo_ahorro.js</span></div>
+                        <pre><code>let a = 0, b = 1;
+for (let i = 1; i &lt;= meses; i++) {
+    let cuotaActual = b;
+    acumuladorTotal += cuotaActual;
+    let c = a + b;
+    a = b; b = c;
+}</code></pre>
+                    </div>
+
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="mesesAhorro">Cantidad de meses a proyectar:</label>
+                            <input type="number" id="mesesAhorro" min="1" max="40" placeholder="Ej. 6" required>
+                        </div>
+                        <button type="button" class="btn btn-cyan" onclick="calcularAhorro()">Calcular Plan de Ahorro</button>
+                    </form>
+                    <div id="resultadoAhorro" class="resultado-container"></div>
+                </article>
+
+                <article class="card exercise-card card-emerald" id="ejercicio2">
+                    <div class="card-badge badge-neon-emerald">Estructura Biológica</div>
+                    <h3>Patrones en el Diseño Natural</h3>
+                    <p class="description">Genera flujos numéricos puros de la secuencia para analizar la disposición de ramificaciones foliares o el crecimiento ordenado de pétalos florales.</p>
+                    
+                    <div class="code-window">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-title">patron_biologico.js</span></div>
+                        <pre><code>let a = 0, b = 1;
+for (let i = 0; i &lt; niveles; i++) {
+    cadenaSalida += (i === 0) ? b : " → " + b;
+    let c = a + b;
+    a = b; b = c;
+}</code></pre>
+                    </div>
+
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="nivelesNat">Niveles de ramificación vegetativa:</label>
+                            <input type="number" id="nivelesNat" min="1" max="50" placeholder="Ej. 8" required>
+                        </div>
+                        <button type="button" class="btn btn-emerald" onclick="generarCrecimiento()">Generar Crecimiento</button>
+                    </form>
+                    <div id="resultadoNatural" class="resultado-container"></div>
+                </article>
+
+                <article class="card exercise-card card-pink" id="ejercicio3">
+                    <div class="card-badge badge-neon-pink">Criptografía</div>
+                    <h3>Validación de Claves de Seguridad</h3>
+                    <p class="description">Verifica el nivel de cifrado básico de un código de acceso analizando su primalidad mediante el recuento aritmético exacto de factores de división.</p>
+                    
+                    <div class="code-window">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-title">analisis_primalidad.js</span></div>
+                        <pre><code>let divisores = 0;
+for (let i = 1; i &lt;= codigo; i++) {
+    if (codigo % i === 0) divisores++;
+}
+let esPrimo = (divisores === 2);</code></pre>
+                    </div>
+
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="codigoSeg">Código numérico a evaluar:</label>
+                            <input type="number" id="codigoSeg" min="1" placeholder="Ej. 17" required>
+                        </div>
+                        <button type="button" class="btn btn-pink" onclick="validarClave()">Validar Fortaleza de Clave</button>
+                    </form>
+                    <div id="resultadoSeguridad" class="resultado-container"></div>
+                </article>
+
+                <article class="card exercise-card full-width-card card-purple" id="ejercicio4">
+                    <div class="card-badge badge-neon-purple">Matriz Avanzada</div>
+                    <h3>Módulo Combinado: Cribado de Primos en Fibonacci</h3>
+                    <p class="description">Módulo de ingeniería avanzada que calcula en tiempo real los términos solicitados de la serie de Fibonacci y, mediante una subfunción analítica integrada, determina de inmediato cuáles de estos números cumplen simultáneamente la condición de ser números primos.</p>
+                    
+                    <div class="code-window">
+                        <div class="code-header"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="code-title">matrix_combinada_master.js</span></div>
+                        <pre><code>let a = 0, b = 1;
+for (let i = 1; i &lt;= terminos; i++) {
+    let numFib = b;
+    let esPrimo = verificarPrimalidad(numFib); // Sub-función por residuos
+    // Desplazamiento lineal de variables
+    let c = a + b; a = b; b = c;
+}</code></pre>
+                    </div>
+
+                    <form onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="cantidadComb">Cantidad de términos de Fibonacci a generar y analizar:</label>
+                            <input type="number" id="cantidadComb" min="1" max="35" placeholder="Ej. 12" required>
+                        </div>
+                        <button type="button" class="btn btn-purple" onclick="ejecutarCombinado()">Generar Secuencia y Evaluar Primalidad</button>
+                    </form>
+                    <div id="resultadoCombinado" class="resultado-container"></div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="card conclusion-card" id="conclusiones">
+            <h2 class="neon-text-pink">Conclusión Lógica del Sistema</h2>
+            <p>La materialización de esta plataforma comprueba que la abstracción matemática se traduce con precisión en software lógico y responsivo. Mediante el uso nativo de JavaScript, CSS temático de alta luminiscencia y el control directo del DOM con <code>document.getElementById()</code>, se valida que los principios teóricos del Desafío Web 2005 se cumplen en su totalidad con un código limpio, legible y escalable.</p>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>Desafío Web 2005 - Matriz Matemática Interactiva en Entorno Ciberpunk / Neón</p>
+        <div class="footer-links">
+            <a href="#" class="footer-btn btn-neon-border-cyan">📂 Repositorio Git del Proyecto</a>
+            <a href="#" class="footer-btn btn-neon-border-pink">🌐 Sitio Web Publicado en Línea</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
